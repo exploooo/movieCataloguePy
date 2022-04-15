@@ -67,6 +67,5 @@ def movie_add():
     except:
         print('\nPrzerwano operację wprowadzania filmu!\n')
 
-
 movies_library = get_database()
     

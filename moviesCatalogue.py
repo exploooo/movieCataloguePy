@@ -23,10 +23,8 @@ while wybor != 5:
             case 3:
                 print("\nZaloguj się/Utwórz konto\n")
             case 4:
-                print("\nWeryfikacja\n")
-            case 5:
                 print("\nDziękujemy za skorzystanie z naszych usług! Do zobaczenia.\n")
-            case wybor if wybor > 5 or wybor < 5:
+            case wybor if wybor > 5 or wybor < 0:
                 print("\nDla podanego numeru nie ma operacji!\n")
     except ValueError:
         print('\nWybór musi być liczbą!\n')

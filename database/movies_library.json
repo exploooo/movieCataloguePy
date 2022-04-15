@@ -13,24 +13,35 @@
     },
     {
         "id": 2,
-        "Title": "10 kwietnia",
-        "Director": "2010-4-10",
-        "Release": "2010-4-10",
+        "Title": "Vayas Condihos",
+        "Director": "Sentino",
+        "Release": "2010-10-10",
         "Genres": [
-            "Katastrofa"
+            "Crime"
         ],
-        "Rating": 2,
+        "Rating": 22,
         "Verified": false
     },
     {
         "id": 3,
-        "Title": "Skrrt",
-        "Director": "Young Multi",
-        "Release": "2018-11-06",
+        "Title": "Vayamos Companieros",
+        "Director": "Jakiś Hipszan",
+        "Release": "2012-10-12",
         "Genres": [
-            "Trap"
+            "Spanish"
         ],
-        "Rating": 10,
+        "Rating": 99,
+        "Verified": false
+    },
+    {
+        "id": 4,
+        "Title": "Jesteś Bogiem",
+        "Director": "Piotr 'Magik' Łuszcz",
+        "Release": "2000-12-26",
+        "Genres": [
+            "Suicide"
+        ],
+        "Rating": 13,
         "Verified": false
     }
 ]
