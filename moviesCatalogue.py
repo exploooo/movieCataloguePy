@@ -9,23 +9,24 @@ Aby zweryfikować dodane ostatnio rekordy wybierz: 4
 Aby zakończyć działanie programu wybierz: 5
 """)
 
-wybor = 1
+wybor = ""
 
 while wybor != 5:
     try:
         wybor = int(input("Wybor: "))
         match wybor:
             case 1:
-                print("Wyświetlam Bibliotekę!")
+                print("\nWyświetlam Bibliotekę!\n")
             case 2:
-                print("Dodawanie Filmu")
+                print("\nDodawanie Filmu\n")
+                movie_add()
             case 3:
-                print("Usuwanie Filmu")
+                print("\nUsuwanie Filmu\n")
             case 4:
-                print("Weryfikacja")
+                print("\nWeryfikacja\n")
             case 5:
                 print("Dziękujemy za skorzystanie z naszych usług! Do zobaczenia.")
             case wybor if wybor > 5 or wybor < 5:
-                print("Dla podanego numeru nie ma operacji!")
+                print("\nDla podanego numeru nie ma operacji!\n")
     except ValueError:
-        print('Wybór musi być liczbą!')
+        print('\nWybór musi być liczbą!\n')
