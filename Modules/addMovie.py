@@ -42,7 +42,14 @@ def movie_add_questionary():
     
     return movie
 
-def add_movie(movie):
+def movie_add():
+    try:
+        movie = insert_movie_to_database(movie_add_questionary())
+        print('Rekord został wprowadzony do bazy i oczekuje na weryfikację!')
+    except:
+        print('Przerwano operację wprowadzania filmu!')
+
+def insert_movie_to_database(movie):
     if(check_movie(movie)):
         movies_library.append(movie)
         with open('./database/movies_library.json', "w", encoding="UTF-8") as file:

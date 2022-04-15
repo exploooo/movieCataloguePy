@@ -10,18 +10,5 @@
         ],
         "Rating": 79,
         "Verified": true
-    },
-    {
-        "id": 2,
-        "Title": "7 Gniewnych Ludzi",
-        "Director": "Quentin Tarrantino",
-        "Release": "2002-10-12",
-        "Genres": [
-            "Action",
-            "Drama",
-            "Western"
-        ],
-        "Rating": 68,
-        "Verified": false
     }
 ]
