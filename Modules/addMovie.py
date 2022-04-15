@@ -6,7 +6,6 @@ def get_lowest_free_id(database):
     idies = [
         int(movie['id'])
         for movie in database
-        
     ]
     idies.sort()
     for i in range (min(idies), max(idies)+1):
