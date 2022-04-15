@@ -20,6 +20,8 @@ def check_date(date):
         print ('Podano błędny format daty, spróbuj użyć "-" zamiast kropek i zastosować się do formatu yyyy-mm-dd')
         return 'err'
 
+# A function that checks if string data is correctly formated
+
 def check_string_data(data):
     if type(data) == tuple:
         data_str = ""
@@ -35,8 +37,9 @@ def check_string_data(data):
              return 'err'
         return data
 
+# A function that checks if our rating data is higher than 0 and lower than 100
+
 def check_rating(rating):
-    #function that checks if our rating data is higher than 0 and lower than 100
     try:
         rating = int(rating.replace(' ', ''))
     except:
@@ -46,6 +49,8 @@ def check_rating(rating):
         return rating
     return 'err'
     
+
+# A funcion that checks if is there any error in parsed data
 
 def check_movie(movie):
     for key in movie:

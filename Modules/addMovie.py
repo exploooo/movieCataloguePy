@@ -54,15 +54,17 @@ def insert_movie_to_database(movie):
         with open('./database/movies_library.json', "w", encoding="UTF-8") as file:
             json.dump(movies_library, file, ensure_ascii=False ,indent = 4)
         return movie
+    else:
+        return 'err'
 
 # main function called in main menu - calls questionary and gives feedback whether movie was added or not
 
 def movie_add():
     try:
         movie = insert_movie_to_database(movie_add_questionary())
-        print('Rekord został wprowadzony do bazy i oczekuje na weryfikację!')
+        print('\nRekord został wprowadzony do bazy i oczekuje na weryfikację!\n')
     except:
-        print('Przerwano operację wprowadzania filmu!')
+        print('\nPrzerwano operację wprowadzania filmu!\n')
 
 
 movies_library = get_database()

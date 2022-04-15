@@ -10,5 +10,27 @@
         ],
         "Rating": 79,
         "Verified": true
+    },
+    {
+        "id": 2,
+        "Title": "10 kwietnia",
+        "Director": "2010-4-10",
+        "Release": "2010-4-10",
+        "Genres": [
+            "Katastrofa"
+        ],
+        "Rating": 2,
+        "Verified": false
+    },
+    {
+        "id": 3,
+        "Title": "Skrrt",
+        "Director": "Young Multi",
+        "Release": "2018-11-06",
+        "Genres": [
+            "Trap"
+        ],
+        "Rating": 10,
+        "Verified": false
     }
 ]
