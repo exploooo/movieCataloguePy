@@ -2,6 +2,8 @@ from Modules.verification import *
 from Modules.importBase import *
 import json
 
+
+# Getting lowest free id from database to assign it to new movie record
 def get_lowest_free_id(database):
     idies = [
         int(movie['id'])
@@ -12,7 +14,9 @@ def get_lowest_free_id(database):
         if i not in idies:
             return i    
     return max(idies)+1
-    
+
+
+# Questionary that gets data from user and parses it into a new movie object
 def movie_add_questionary():
     title = check_string_data(input("Title: "))
     while title == 'err':
@@ -42,12 +46,7 @@ def movie_add_questionary():
     
     return movie
 
-def movie_add():
-    try:
-        movie = insert_movie_to_database(movie_add_questionary())
-        print('Rekord został wprowadzony do bazy i oczekuje na weryfikację!')
-    except:
-        print('Przerwano operację wprowadzania filmu!')
+# function that inserts new movie record into database
 
 def insert_movie_to_database(movie):
     if(check_movie(movie)):
@@ -55,6 +54,16 @@ def insert_movie_to_database(movie):
         with open('./database/movies_library.json', "w", encoding="UTF-8") as file:
             json.dump(movies_library, file, ensure_ascii=False ,indent = 4)
         return movie
+
+# main function called in main menu - calls questionary and gives feedback whether movie was added or not
+
+def movie_add():
+    try:
+        movie = insert_movie_to_database(movie_add_questionary())
+        print('Rekord został wprowadzony do bazy i oczekuje na weryfikację!')
+    except:
+        print('Przerwano operację wprowadzania filmu!')
+
 
 movies_library = get_database()
     

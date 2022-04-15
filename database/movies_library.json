@@ -10,18 +10,5 @@
         ],
         "Rating": 79,
         "Verified": true
-    },
-    {
-        "id": 2,
-        "Title": "7 gniewnych ludzi",
-        "Director": "Twój Stary",
-        "Release": "2012-10-12",
-        "Genres": [
-            "Sex",
-            "Drugs",
-            "Rock'n'Roll"
-        ],
-        "Rating": 25,
-        "Verified": false
     }
 ]

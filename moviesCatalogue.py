@@ -25,8 +25,11 @@ while wybor != 5:
             case 4:
                 print("\nWeryfikacja\n")
             case 5:
-                print("Dziękujemy za skorzystanie z naszych usług! Do zobaczenia.")
+                print("\nDziękujemy za skorzystanie z naszych usług! Do zobaczenia.\n")
             case wybor if wybor > 5 or wybor < 5:
                 print("\nDla podanego numeru nie ma operacji!\n")
     except ValueError:
         print('\nWybór musi być liczbą!\n')
+    except KeyboardInterrupt:
+        print('\nDziękujemy za skorzystanie z naszych usług! Do zobaczenia.\n')
+        break
