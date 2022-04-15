@@ -1,10 +1,11 @@
 from Modules.addMovie import *
+from Modules.displayMoviesLibrary import *
 
 print ("""Witaj w Bibliotece Filmowej!
 
 Aby wyświetlić bibliotekę filmową wybierz: 1
 Aby dodać film wybierz: 2
-Aby usunąć film wybierz: 3
+Aby się zalogować lub założyć konto wybierz: 3
 Aby zweryfikować dodane ostatnio rekordy wybierz: 4
 Aby zakończyć działanie programu wybierz: 5
 """)
@@ -16,12 +17,11 @@ while wybor != 5:
         wybor = int(input("Wybor: "))
         match wybor:
             case 1:
-                print("\nWyświetlam Bibliotekę!\n")
+                display_movies_library()
             case 2:
-                print("\nDodawanie Filmu\n")
                 movie_add()
             case 3:
-                print("\nUsuwanie Filmu\n")
+                print("\nZaloguj się/Utwórz konto\n")
             case 4:
                 print("\nWeryfikacja\n")
             case 5:

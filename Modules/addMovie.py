@@ -60,6 +60,7 @@ def insert_movie_to_database(movie):
 # main function called in main menu - calls questionary and gives feedback whether movie was added or not
 
 def movie_add():
+    print("\nDodawanie Filmu\n")
     try:
         movie = insert_movie_to_database(movie_add_questionary())
         print('\nRekord został wprowadzony do bazy i oczekuje na weryfikację!\n')
