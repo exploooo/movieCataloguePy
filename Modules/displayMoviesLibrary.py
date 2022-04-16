@@ -1,14 +1,11 @@
 from Modules.importBase import *
 from Modules.removeMovie import *
+from Modules.commandPrompt import *
 
 def display_movies_library():
     movies_library = get_database()
-    print("\nWyświetlam Bibliotekę!\n")
+    print("\nWyświetlam Bibliotekę!")
     ended_at = display_next(5, 0)
-    print("""Next *n* - wyświetlanie następnych n pozycji
-Show *id* - displays more info about specific movie
-Quit - exit
-""")
     command = True
     while command:
         try:
@@ -25,6 +22,8 @@ Quit - exit
                     show_record_details(record_id, movies_library)
                 except:
                     print('\nPodano błędną wartość, dla komendy show należy podać ilość elementów do wyświetlenia\n')
+            elif command == 'help':
+                cp_display_help()
             elif command == 'q' or command == 'quit':
                 break
             else:
@@ -42,7 +41,7 @@ def display_next(quantity, beggining):
             print("\nWyświetliłem już wszystkie filmy w naszej bibliotece!\nJeśli nie znalazłeś tytułu, który cię interesuje zajrzyj ponownie później lub dodaj go do bazy.\n")
             break
         try:
-            print('------ Record no.: ', movies_library[previous_id]['id'], ' ------\n')
+            print('\n------ Record no.: ', movies_library[previous_id]['id'], ' ------\n')
             print('Title: ', movies_library[previous_id]['Title'])
             print('Director: ', movies_library[previous_id]['Director'])
             print('Release: ', movies_library[previous_id]['Release'])

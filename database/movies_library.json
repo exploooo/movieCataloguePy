@@ -43,5 +43,40 @@
         ],
         "Rating": 13,
         "Verified": false
+    },
+    {
+        "id": 5,
+        "Title": "Chuj kurwa pieniądze",
+        "Director": "Twój stary",
+        "Release": "2010-12-20",
+        "Genres": [
+            "Sex",
+            "Drama"
+        ],
+        "Rating": 25,
+        "Verified": false
+    },
+    {
+        "id": 6,
+        "Title": "Król Sentino",
+        "Director": "Megalomania",
+        "Release": "2010-10-12",
+        "Genres": [
+            "9-11",
+            "Sex"
+        ],
+        "Rating": 25,
+        "Verified": false
+    },
+    {
+        "id": 7,
+        "Title": "Twój Stary Tomek Sayer",
+        "Director": "Osiński Mateusz",
+        "Release": "2012-10-12",
+        "Genres": [
+            "Action"
+        ],
+        "Rating": 59,
+        "Verified": false
     }
 ]
