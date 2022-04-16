@@ -2,28 +2,31 @@ from Modules.importBase import *
 from Modules.removeMovie import *
 
 def display_movies_library():
+    movies_library = get_database()
     print("\nWyświetlam Bibliotekę!\n")
     ended_at = display_next(5, 0)
     print("""Next *n* - wyświetlanie następnych n pozycji
 Show *id* - displays more info about specific movie
 Quit - exit
 """)
-    command = ''
-    while command != 'q' and command != 'quit':
+    command = True
+    while command:
         try:
             command = input('Wybór(Wyświetlanie-Biblioteki): ').lower()
             if command[0:4].lower().replace(' ', '') == 'next':
                 try:
                     quantity = int(command[5:].replace(' ', ''))
                     display_next(quantity, ended_at)
-                except:
+                except TypeError:
                     print('\nPodano błędną wartość, dla komendy next należy podać ilość elementów do wyświetlenia\n')
             elif command[0:4].replace(' ', '').lower() == 'show':
                 try:
                     record_id = int(command[5:].replace(' ', ''))
-                    show_record_details(record_id)
+                    show_record_details(record_id, movies_library)
                 except:
                     print('\nPodano błędną wartość, dla komendy show należy podać ilość elementów do wyświetlenia\n')
+            elif command == 'q' or command == 'quit':
+                break
             else:
                 print('\nNie rozpoznano komendy\n')
         except KeyboardInterrupt:
@@ -62,8 +65,11 @@ def display_next(quantity, beggining):
             previous_id+=1
     return previous_id
 
-def show_record_details(record_id):
+def show_record_details(record_id, database):
     record_index = find_record_of(record_id)
-    
+    try:
+        print('\n',database[record_index]['Title'],'\n')
+    except TypeError:
+        return
 
 
