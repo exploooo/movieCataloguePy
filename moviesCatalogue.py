@@ -6,13 +6,12 @@ print ("""Witaj w Bibliotece Filmowej!
 Aby wyświetlić bibliotekę filmową wybierz: 1
 Aby dodać film wybierz: 2
 Aby się zalogować lub założyć konto wybierz: 3
-Aby zweryfikować dodane ostatnio rekordy wybierz: 4
-Aby zakończyć działanie programu wybierz: 5
+Aby zakończyć działanie programu wybierz: 4
 """)
 
 wybor = ""
 
-while wybor != 5:
+while wybor != 4:
     try:
         wybor = int(input("Wybor: "))
         match wybor:
